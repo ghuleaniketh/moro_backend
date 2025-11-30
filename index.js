@@ -5,6 +5,10 @@ const fs = require('fs');
 const cors = require('cors');
 
 
+const API_KEY = "sk_gnn1ywbu_H7RPOd9zMLxhqdSryY1iLO3A";
+const LLM_API_KEY = "sk_ms69qy6j_JIwgTNftUHEgEmDkifnKzKd0";
+const TTS_API_KEY = "sk_m3x1ndoz_uq12w4DQHoZ4q7EUHOPpVTRx";
+
 
 const app = express();
 const server = require("http").createServer(app);
