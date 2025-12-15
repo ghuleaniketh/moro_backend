@@ -3,11 +3,11 @@ const { WebSocketServer } = require("ws");
 const { SarvamAIClient } = require("sarvamai");
 const fs = require('fs');
 const cors = require('cors');
+require('dotenv').config({ path: '.env.local' });
 
-
-const API_KEY = "sk_gnn1ywbu_H7RPOd9zMLxhqdSryY1iLO3A";
-const LLM_API_KEY = "sk_ms69qy6j_JIwgTNftUHEgEmDkifnKzKd0";
-const TTS_API_KEY = "sk_m3x1ndoz_uq12w4DQHoZ4q7EUHOPpVTRx";
+const API_KEY = process.env.API_KEY;
+const LLM_API_KEY = process.env.LLM_API_KEY;
+const TTS_API_KEY = process.env.TTS_API_KEY;
 
 
 const app = express();
@@ -85,25 +85,7 @@ wss.on('connection', (ws) => {
                 console.error('LLM error:', err);
             }
 
-            // try {
-            //     const response = await axios.post('http://localhost:11434/api/chat', {
-            //         model: 'llama2', // change if you pulled a different model
-            //         messages: [
-            //             { role: "system",content: "You are an AI voice assistant named Moro.Respond to users in a natural, professional, and straightforward manner. Do not use emojis, excessive expressions, or overly casual/friendly language.If a user asks for an introduction, introduce yourself using your name (“Moro”).If the user asks for an introduction for themselves, use their name in the introduction if provided or ask for it if notYou have knowledge of Next Tech Lab AP at SRM University AP. If anyone asks about the lab, respond with accurate information:“Next Tech Lab AP is a student-led research and innovation community at SRM University AP, Amaravati. It focuses on cutting-edge technologies, including artificial intelligence, web development, blockchain, cybersecurity, and mathematical research. The lab organizes hackathons, tech workshops, and collaborates on various technical projects across India, providing students with practical exposure and networking opportunities.”Remain professional and concise in all responses unless instructed otherwise.Mention your own name only when specifically asked, when introducing yourself, or when required for clarity.If a user says hello,  greets you, or asks for an introduction, reply by introducing yourself as Moro and inform them that you were designed and developed by students of Next Tech Lab AP at SRM University AP."},
-            //             { role: "user", content: prompt }
-            //         ],
-            //         stream: false
-            //     });
-            //     // console.log('LLM Response:', response.data.message.content);
-            //     llmOutput = response.data.message.content;
-            // } catch (err) {
-            //     console.error('LLM error:', err);
-            // }
-
-            
-
-
-            //this is the TTS part using sarvam ai
+           
             let ttsOutput = "";
             try{
                 const client = new SarvamAIClient({apiSubscriptionKey: TTS_API_KEY});
