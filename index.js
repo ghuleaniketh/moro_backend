@@ -20,7 +20,7 @@ const server = require("http").createServer(app);
 const wss = new WebSocketServer({ server });
 
 
-app.use(cors({ origin: 'http://localhost:3000' })); 
+app.use(cors({ origin: 'https://morobuddy.vercel.app' })); 
 app.use(express.json());
 
 app.post("/chat", upload.single('audio'), async (req, res) => {
