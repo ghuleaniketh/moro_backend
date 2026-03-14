@@ -1,0 +1,277 @@
+{
+  "organization": {
+    "name": "Next Tech Lab AP",
+    "short_name": "NTL",
+    "type": "Student-led innovation hub and research laboratory",
+    "location": "SRM University-AP, Amaravati, India",
+    "mission": "To reverse brain-drain and foster deep research culture in India through interdisciplinary student innovation.",
+    "description": "A collaborative, non-hierarchical student research lab focused on solving real-world problems using cutting-edge technologies, participating in global competitions, publishing research, and building prototype solutions. Next Tech Lab hosts workshops, paper reading sessions, game jams, hackathons, and project expos to enhance student skills.",
+    "other_campuses": [
+      "SRM Institute of Science and Technology (Chennai)",
+      "SRM University-AP (Amaravati)"
+    ],
+    "core_values": [
+      "Student autonomy",
+      "Open innovation",
+      "Cross-disciplinary research",
+      "Practical impact"
+    ],
+    "recognition": [
+      "Silver Winner — QS Reimagine Education Award (Student-Led Innovation, 2018)"
+    ]
+  },
+  "focus_domains": [
+    "Artificial Intelligence",
+    "Internet of Things (IoT)",
+    "Computational Biology",
+    "Electrical Systems",
+    "Extended Reality (XR)",
+    "Cryptocurrency and Blockchain",
+    "Human-Computer Interaction (HCI)",
+    "Web & App Development",
+    "Design (UI/UX)"
+  ],
+  "structure": {
+    "model": "Student-led",
+    "hierarchy": "Non-hierarchical",
+    "departments_involved": "8+",
+    "research_groups": 6,
+    "faculty_in_charge": false,
+    "approach": "Cross-disciplinary, project-based learning and research"
+  },
+  "history": {
+    "founded_year": 2016,
+    "founders": [
+      "Anshuman Pandey",
+      "Adithya Ramakrishnan"
+    ],
+    "inspiration": "MIT Media Lab collaborative research model",
+    "timeline": [
+      {
+        "year": 2016,
+        "event": "Founded after founders spent a semester at MIT"
+      },
+      {
+        "year": 2017,
+        "event": "Next Tech Lab established at SRM University-AP Amaravati campus"
+      },
+      {
+        "year": 2018,
+        "event": "Won QS Reimagine Education Silver Award for Student-Led Innovation at Wharton School"
+      }
+    ]
+  },
+  "achievements_and_recognition": [
+    "Only Indian organization to win QS Reimagine Education Award (2018)",
+    "Participation in global events such as Game Developers Conference",
+    "Members showcased work at India HCI Conference and international summits",
+    "Advisors from institutions like MIT, Google Brain, University of Cambridge and Harvard",
+    "Official member of ICXR international XR research network",
+    "Students have excelled at hackathons like ETH Denver (2020) and national hackathons"
+  ],
+  "activities": [
+    "9Hacks hackathons",
+    "HackSRM (48-hour student-run national hackathon)",
+    "Technical workshops (AI/ML, Blockchain, XR)",
+    "Paper-reading sessions and research discussions",
+    "Game jams and design sprints",
+    "Next Tech Lab Expos and project showcases",
+    "Smart India Hackathon internal qualifiers"
+  ],
+  "membership": {
+    "total_members": "200+ (LinkedIn reports 201–500 associates)",
+    "research_groups": 6
+  },
+  "labs": [
+    {
+      "id": "satoshi_lab",
+      "name": "Satoshi Lab",
+      "domain": "Blockchain and Cybersecurity",
+      "leadership": {
+        "syndicate_lead": "Ayush Dutta"
+      },
+      "focus_areas": [
+        "Blockchain protocols",
+        "Cryptography",
+        "Zero-knowledge proofs",
+        "Decentralized monitoring",
+        "Cybersecurity systems"
+      ],
+      "projects": [
+        {
+          "id": "poseidon",
+          "name": "Poseidon",
+          "type": "zk-SNARK cryptography toolkit",
+          "description": "Privacy-preserving blockchain proof system"
+        },
+        {
+          "id": "dpin",
+          "name": "dPIN",
+          "type": "Decentralized monitoring system",
+          "description": "Distributed and trustless infrastructure monitoring network"
+        }
+      ],
+      "keywords": [
+        "satoshi",
+        "blockchain",
+        "crypto",
+        "cybersecurity",
+        "zk",
+        "poseidon",
+        "dpin"
+      ]
+    }
+  ],
+  "university": {
+    "name": "SRM University-AP",
+    "full_name": "SRM University Andhra Pradesh",
+    "location": "Amaravati, Andhra Pradesh, India",
+    "type": "Private multidisciplinary university",
+    "established": 2017,
+    "leadership": {
+      "chancellor": "Dr. T. R. Paarivendhar",
+      "vice_chancellor": "Prof. Ch. Satish Kumar"
+    },
+    "campus_size": "100+ acres",
+    "description": "A research-oriented university combining engineering, science, liberal arts, business, and global exposure with strong emphasis on innovation and entrepreneurship.",
+    "highlights": [
+      "Industry-oriented curriculum",
+      "International collaborations (UC Berkeley, Carnegie Mellon, WI-Madison, etc.)",
+      "Research-driven culture and strong placements",
+      "Supports student-led labs like Next Tech Lab",
+      "Participation in cutting-edge initiatives (AI Institute, Quantum Computing Hub)"
+    ],
+    "academics": [
+      "Undergraduate programmes in Engineering, Liberal Arts, Sciences and Business",
+      "Postgraduate and Ph.D programmes with research focus",
+      "Emerging technologies tracks including Energy Engineering, Defence Engineering, and Semiconductor Technologies"
+    ],
+    "achievements": [
+      "QS I-GAUGE Institution of Happiness (2025–26)",
+      "Ranked amongst top private universities in Nature Index and IIRF rankings",
+      "Strong placement records with international offers and high package averages"
+    ]
+  },
+  "state": {
+    "name": "Andhra Pradesh",
+    "capital_region": "Amaravati",
+    "location": "Southeastern coast of India along the Bay of Bengal",
+    "nickname": "Rice Bowl of India",
+    "description": "A culturally rich and naturally beautiful state known for classical arts, spiritual heritage, warm hospitality, and bold cuisine. Andhra Pradesh blends centuries-old traditions with modern education and innovation, making it an ideal environment for research communities like Next Tech Lab and institutions like SRM University-AP.",
+    "language": {
+      "official": "Telugu",
+      "classical_language_status": true,
+      "notes": "One of India's designated classical languages with a deep literary and poetic history."
+    },
+    "cultural_identity": {
+      "traits": [
+        "Warm hospitality",
+        "Strong community bonds",
+        "Celebration of arts and festivals",
+        "Respect for education and knowledge",
+        "Balance of tradition and technology"
+      ]
+    },
+    "classical_arts": {
+      "dance_forms": [
+        "Kuchipudi"
+      ],
+      "music": [
+        "Carnatic classical music",
+        "Telugu folk music"
+      ],
+      "crafts_and_handlooms": [
+        "Kalamkari hand-painted textiles",
+        "Ikat weaving",
+        "Kondapalli toys",
+        "Traditional silk sarees"
+      ]
+    },
+    "festivals": [
+      "Ugadi (Telugu New Year)",
+      "Sankranti/Pongal (Harvest festival)",
+      "Vinayaka Chavithi",
+      "Sri Rama Navami",
+      "Dussehra and Deepavali"
+    ],
+    "cuisine": {
+      "style": "Spicy, tangy, and rice-based",
+      "famous_dishes": [
+        "Andhra Biryani",
+        "Gongura Pachadi",
+        "Avakaya Pickle",
+        "Gutti Vankaya Kura",
+        "Pesarattu",
+        "Pulihora",
+        "Bobbatlu"
+      ],
+      "notes": "Widely regarded as one of the spiciest and most flavorful cuisines in India."
+    },
+    "nature_and_geography": {
+      "coastline": "Long Bay of Bengal coastline with beaches and ports",
+      "major_rivers": [
+        "Krishna",
+        "Godavari"
+      ],
+      "landscapes": [
+        "Fertile deltas",
+        "Hill stations",
+        "Valleys",
+        "Forests"
+      ]
+    },
+    "important_places": [
+      "Tirupati",
+      "Araku Valley",
+      "Borra Caves",
+      "Amaravati Buddhist heritage sites",
+      "Visakhapatnam beaches"
+    ],
+    "tourism_landmarks": [
+      {
+        "name": "Sri Venkateswara Temple",
+        "location": "Tirupati",
+        "type": "Spiritual pilgrimage site"
+      },
+      {
+        "name": "Araku Valley",
+        "type": "Hill station and coffee plantations"
+      },
+      {
+        "name": "Borra Caves",
+        "type": "Natural limestone caves"
+      }
+    ],
+    "connection_to_university": {
+      "context": "SRM University-AP and Next Tech Lab operate in Amaravati, benefiting from the state's peaceful environment, strong educational ecosystem, and culturally vibrant student community.",
+      "benefits": [
+        "Supportive local culture",
+        "Growing tech ecosystem",
+        "Student innovation mindset",
+        "Blend of tradition and modern research"
+      ]
+    },
+    "keywords": [
+      "andhra",
+      "telugu culture",
+      "kuchipudi",
+      "spicy food",
+      "amaravati",
+      "tirupati",
+      "heritage",
+      "coastal india"
+    ]
+  },
+  "keywords_global": [
+    "next tech lab",
+    "ntl",
+    "srm",
+    "innovation lab",
+    "student research lab",
+    "hackathon",
+    "ai",
+    "iot",
+    "xr",
+    "blockchain"
+  ]
+}
