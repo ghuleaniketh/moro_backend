@@ -19,7 +19,6 @@ const app = express();
 const server = require("http").createServer(app);
 const wss = new WebSocketServer({ server });
 
-
 app.use(cors({
   origin: [
     "http://localhost:3000",
@@ -41,6 +40,12 @@ app.post("/chat", upload.single('audio'), async (req, res) => {
         if (req.file) {
             console.log("Processing audio file:", req.file.path);
             
+            if(!API_KEY){
+                console.error("the api key is having some issue please check the key and try again");
+                return res.status(500).json({ error: "API key not set" });
+            }else{
+                console.log("API Key is set, proceeding with STT transcription");
+            }
             try {
                 const client = new SarvamAIClient({ apiSubscriptionKey: API_KEY });
                 const audioFile = fs.createReadStream(req.file.path);
@@ -66,6 +71,11 @@ app.post("/chat", upload.single('audio'), async (req, res) => {
             return res.status(400).json({ error: "Message or audio is required" });
         }
 
+        if(LLM_API_KEY){
+            console.log("LLM API Key is set, proceeding with LLM response generation");
+        }else{
+            console.error("the api LLM key is having some issue please check the key and try again");
+        }
         // Get LLM response
         let llmOutput = "";
         try {
