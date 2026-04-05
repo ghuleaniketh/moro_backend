@@ -15,22 +15,21 @@ const createKnowledgeContext = () => {
     const state = ntlKnowledge.state;
     
     // Format labs with all details
-    const labs = ntlKnowledge.labs.map(lab => {
-        const projects = lab.projects.map(p => 
+    const labs = (ntlKnowledge.labs || []).map(lab => {
+        const projects = (lab.projects || []).map(p => 
             `  * ${p.name} (${p.type}): ${p.description}`
         ).join('\n');
         
         return `${lab.name} (${lab.domain}):
-- Syndicate Lead: ${lab.leadership.syndicate_lead}
-- Focus Areas: ${lab.focus_areas.join(', ')}
+- Focus Areas: ${(lab.focus_areas || []).join(', ')}
 - Projects:
 ${projects}
-- Keywords: ${lab.keywords.join(', ')}`;
+- Keywords: ${(lab.keywords || []).join(', ')}`;
     }).join('\n\n');
 
-    const achievements = ntlKnowledge.achievements_and_recognition.map(a => `- ${a}`).join('\n');
-    const timeline = ntlKnowledge.history.timeline.map(t => `- ${t.year}: ${t.event}`).join('\n');
-    const universityHighlights = university.highlights.map(h => `- ${h}`).join('\n');
+    const achievements = (ntlKnowledge.achievements_and_recognition || []).map(a => `- ${a}`).join('\n');
+    const timeline = (ntlKnowledge.history.timeline || []).map(t => `- ${t.year}: ${t.event}`).join('\n');
+    const universityHighlights = (university.highlights || []).map(h => `- ${h}`).join('\n');
     
     // Format state information
     const stateInfo = `

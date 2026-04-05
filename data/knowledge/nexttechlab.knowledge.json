@@ -82,20 +82,88 @@
     "total_members": "200+ (LinkedIn reports 201–500 associates)",
     "research_groups": 6
   },
+  
   "labs": [
+    {
+      "id": "mccarthy_lab",
+      "name": "McCarthy Lab",
+      "domain": "Artificial Intelligence",
+      "focus_areas": [
+        "Machine learning",
+        "Deep learning",
+        "Natural Language Processing",
+        "RAG architectures",
+        "Foundation models",
+        "Neural networks"
+      ],
+      "keywords": [
+        "mccarthy",
+        "ai",
+        "machine learning",
+        "deep learning",
+        "nlp",
+        "rag",
+        "neural networks"
+      ]
+    },
+    {
+      "id": "pausch_lab",
+      "name": "Pausch Lab",
+      "domain": "Immersive Media",
+      "focus_areas": [
+        "Augmented Reality",
+        "Virtual Reality",
+        "Extended Reality",
+        "2D game development",
+        "3D game development",
+        "Real-time rendering",
+        "Interactive simulations"
+      ],
+      "keywords": [
+        "pausch",
+        "ar",
+        "vr",
+        "xr",
+        "game development",
+        "immersive",
+        "3d",
+        "2d"
+      ]
+    },
+    {
+      "id": "tesla_lab",
+      "name": "Tesla Lab",
+      "domain": "Hardware and Embedded Systems",
+      "focus_areas": [
+        "Electronics",
+        "Embedded systems",
+        "Microcontroller architectures",
+        "IoT integrations",
+        "Edge computing",
+        "Real-time operating systems"
+      ],
+      "keywords": [
+        "tesla",
+        "hardware",
+        "embedded",
+        "iot",
+        "microcontroller",
+        "electronics",
+        "edge computing"
+      ]
+    },
     {
       "id": "satoshi_lab",
       "name": "Satoshi Lab",
       "domain": "Blockchain and Cybersecurity",
-      "leadership": {
-        "syndicate_lead": "Ayush Dutta"
-      },
       "focus_areas": [
         "Blockchain protocols",
         "Cryptography",
         "Zero-knowledge proofs",
         "Decentralized monitoring",
-        "Cybersecurity systems"
+        "Cybersecurity systems",
+        "Malware analysis",
+        "Vulnerability assessment"
       ],
       "projects": [
         {
@@ -118,10 +186,37 @@
         "cybersecurity",
         "zk",
         "poseidon",
-        "dpin"
+        "dpin",
+        "malware",
+        "vulnerability"
+      ]
+    },
+    {
+      "id": "norman_lab",
+      "name": "Norman Lab",
+      "domain": "Web, App and Cloud",
+      "focus_areas": [
+        "Web development",
+        "App development",
+        "Cloud computing",
+        "UI/UX design",
+        "User interfaces",
+        "Digital experiences"
+      ],
+      "keywords": [
+        "norman",
+        "web",
+        "app",
+        "cloud",
+        "ui",
+        "ux",
+        "design",
+        "frontend",
+        "development"
       ]
     }
-  ],
+  ]
+,
   "university": {
     "name": "SRM University-AP",
     "full_name": "SRM University Andhra Pradesh",
