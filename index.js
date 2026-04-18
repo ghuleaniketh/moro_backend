@@ -54,7 +54,8 @@ app.post("/chat", upload.single('audio'), async (req, res) => {
                     language_code: "en-IN",
                     model: "saarika:v2.5"
                 });
-                userMessage = sttResponse;
+                console.log("STT Response:", JSON.stringify(sttResponse, null, 2));
+                userMessage = sttResponse.transcript;
                 console.log("_____________________SET ONE PASSED _______________________________")
                 console.log(`Transcription: ${userMessage}`);
                 
