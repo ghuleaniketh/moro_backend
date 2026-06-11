@@ -14,7 +14,6 @@ const TTS_API_KEY = process.env.TTS_API_KEY;
 
 // Configure multer for file uploads
 const upload = multer({ dest: 'uploads/' });
-
 const app = express();
 const server = require("http").createServer(app);
 const wss = new WebSocketServer({ server });
