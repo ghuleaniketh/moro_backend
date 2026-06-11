@@ -196,3 +196,6 @@ const callClient = (ttsOutput) => {
     });
 }
 
+app.get("/health", (req, res) => {
+  res.send("this server is working good!");
+})
