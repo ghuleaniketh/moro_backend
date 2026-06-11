@@ -8,6 +8,7 @@ const multer = require('multer');
 const { createKnowledgeContext } = require('./utils/knowledgeContext');
 require('dotenv').config({ path: './.env.local' });
 
+
 const API_KEY = process.env.API_KEY;
 const LLM_API_KEY = process.env.LLM_API_KEY;
 const TTS_API_KEY = process.env.TTS_API_KEY;
