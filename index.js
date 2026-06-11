@@ -24,7 +24,6 @@ app.use(cors({
     "https://morobuddy.vercel.app"
   ],
   methods: ["GET","POST"]
-
 }));
 
 app.use(express.json());
