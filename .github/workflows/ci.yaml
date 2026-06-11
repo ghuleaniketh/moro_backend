@@ -3,7 +3,7 @@ name: CI of the Project
 on:
   pull_request:
     branches:
-      - master
+      - main
 
 jobs:
   build:
