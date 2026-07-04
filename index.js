@@ -89,14 +89,11 @@ app.post("/chat", upload.single('audio'), async (req, res) => {
             const client = new SarvamAIClient({apiSubscriptionKey: LLM_API_KEY});
             const llmResponse = await client.chat.completions({
                 model: "sarvam-105b",
-                 messages: [
-                        // {role: "system",content: "You are an AI voice assistant named Moro.Respond to users in a natural, professional, and straightforward manner. Do not use emojis, excessive expressions, or overly casual/friendly language.If a user asks for an introduction, introduce yourself using your name (“Moro”).If the user asks for an introduction for themselves, use their name in the introduction if provided or ask for it if notYou have knowledge of Next Tech Lab AP at SRM University AP. If anyone asks about the lab, respond with accurate information:“Next Tech Lab AP is a student-led research and innovation community at SRM University AP, Amaravati. It focuses on cutting-edge technologies, including artificial intelligence, web development, blockchain, cybersecurity, and mathematical research. The lab organizes hackathons, tech workshops, and collaborates on various technical projects across India, providing students with practical exposure and networking opportunities.”Remain professional and concise in all responses unless instructed otherwise.Mention your own name only when specifically asked, when introducing yourself, or when required for clarity.If a user says hello,  greets you, or asks for an introduction, reply by introducing yourself as Moro and inform them that you were designed and developed by students of Next Tech Lab AP at SRM University AP.",},
-                           {role: "system",content: createKnowledgeContext()},
-                        { role: "user", content: userMessage }
-                        ],
-                temperature: 0.5,
-                top_p: 1,
-                max_tokens: 2000,
+                messages: [
+                    { role: "system", content: createKnowledgeContext() },
+                    { role: "user", content: userMessage }
+                ]
+
             });
            
             // Extract the raw text from the response
@@ -116,7 +113,7 @@ app.post("/chat", upload.single('audio'), async (req, res) => {
 
         // Convert to speech
         try {
-            const client = new SarvamAIClient({apiSubscriptionKey: TTS_API_KEY});
+            const client = new SarvamAIClient({apiSubscriptionKey: API_KEY});
             const ttsResponse = await client.textToSpeech.convert({
                 text: llmOutput,
                 target_language_code: "hi-IN",
