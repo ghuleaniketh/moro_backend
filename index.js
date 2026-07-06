@@ -1,5 +1,4 @@
 const express = require("express");
-const { WebSocketServer } = require("ws");
 const { SarvamAIClient } = require("sarvamai");
 const fs = require('fs');
 const cors = require('cors');
@@ -7,7 +6,7 @@ const path = require('path');
 const multer = require('multer');
 const { createKnowledgeContext } = require('./utils/knowledgeContext');
 require('dotenv').config({ path: './.env.local' });
-
+const {retrieveContext} = require('./utils/retrieval');
 const API_KEY = process.env.API_KEY;
 const LLM_API_KEY = process.env.LLM_API_KEY;
 const TTS_API_KEY = process.env.TTS_API_KEY;
@@ -16,7 +15,6 @@ const TTS_API_KEY = process.env.TTS_API_KEY;
 const upload = multer({ dest: 'uploads/' });
 const app = express();
 const server = require("http").createServer(app);
-const wss = new WebSocketServer({ server });
 
 app.use(cors({
   origin: [
@@ -38,10 +36,9 @@ app.get("/health", (req, res) => {
 
 app.post("/chat", upload.single('audio'), async (req, res) => {
     console.log("Received chat request");
-
+    let systemPrompt = "";
     try {
-        let userMessage = req.body.message;
-        
+        let userMessage = req.body.message; 
         // If audio file is provided, transcribe it first
         if (req.file) {
             console.log("Processing audio file:", req.file.path);
@@ -62,9 +59,21 @@ app.post("/chat", upload.single('audio'), async (req, res) => {
                 });
                 console.log("STT Response:", JSON.stringify(sttResponse, null, 2));
                 userMessage = sttResponse.transcript;
+                if(!userMessage){
+                    console.log("Aapke baat nahi pahuci yaha pe bhaiya");
+                }
+                const embedding = await retrieveContext(userMessage, 5);
+
+                console.log(embedding);
                 console.log("_____________________SET ONE PASSED _______________________________")
-                console.log(`Transcription: ${userMessage}`);
-                
+                console.log(typeof embedding);
+                systemPrompt = `You are Moro, a helpful assistant for Next Tech Lab AP, developed by the developers of Next Tech Lab.
+                                    Answer the user's question directly using the context given to you. Be specific and use the actual facts given .
+                                    Context:
+                                    ${embedding}`;
+
+
+
                 // Clean up uploaded file
                 fs.unlinkSync(req.file.path);
             } catch (err) {
@@ -90,17 +99,23 @@ app.post("/chat", upload.single('audio'), async (req, res) => {
             const llmResponse = await client.chat.completions({
                 model: "sarvam-105b",
                 messages: [
-                    { role: "system", content: createKnowledgeContext() },
+                    { role: "system", content: systemPrompt },
                     { role: "user", content: userMessage }
                 ]
 
             });
            
-            // Extract the raw text from the response
-            let responseText = llmResponse.choices[0].message.content;
+            let responseText = llmResponse.choices[0].message.content.replace(/\*\*(.*?)\*\*/g, "$1")
+                        .replace(/\*(.*?)\*/g, "$1")
+                        .replace(/^[\s]*[\*\-]\s+/gm, "")
+                        .replace(/#{1,6}\s?/g, "")
+                        .replace(/`([^`]*)`/g, "$1")
+                        .replace(/\n{2,}/g, ". ")
+                        .replace(/\n/g, " ")
+                        .trim();
 
-            // Remove <think>...</think> block (including multiline)
-            llmOutput = responseText.replace(/<think>[\s\S]*?<\/think>/g, "").trim();
+            llmOutput = responseText;
+                        
 
            
 
@@ -149,34 +164,6 @@ app.post("/chat", upload.single('audio'), async (req, res) => {
     }
 });
 
-wss.on('connection', (ws) => {
-    console.log("New client connected");
-
-    // Send welcome message to client
-    ws.send("hello hero wel Come to the our server ;)");
-
-    // Buffer to store chunks for this connection
-    let audioChunks = [];
-
-    // Listen for audio chunks
-    ws.on('message', (data, isBinary) => {
-        if (isBinary) {
-            console.log("Received audio chunk, size:", data.length, "chunks in array:", audioChunks.length + 1);
-            audioChunks[0] = data
-        } else {
-            console.log("Received text message:", data.toString());
-        }
-    });
-
-
-    
-
-    // When client disconnects, save audio and (optionally) transcribe
-    ws.on('close', async () => {
-        console.log("Client disconnected");
-        
-    });
-});
 app.get("/", (req, res) => {
     res.send("Welcome to Home Page");
 });

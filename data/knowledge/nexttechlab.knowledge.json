@@ -18,7 +18,22 @@
     ],
     "recognition": [
       "Silver Winner — QS Reimagine Education Award (Student-Led Innovation, 2018)"
-    ]
+    ],
+    "contact": {
+      "address": "SRM University, Andhra Pradesh V-203, Neerukonda",
+      "coordinates": {
+        "latitude": 16.464824,
+        "longitude": 80.507542
+      },
+      "email": "nexttechlab@srmap.edu.in",
+      "phone": "+91 95733 98234",
+      "website": "https://www.nexttechlabap.in",
+      "socials": {
+        "instagram": "https://www.instagram.com/nexttechlab_ap",
+        "linkedin": "https://www.linkedin.com/company/next-tech-lab-ap/",
+        "arcane": "https://pub.nexttechlabap.in/"
+      }
+    }
   },
   "focus_domains": [
     "Artificial Intelligence",
@@ -82,12 +97,16 @@
     "total_members": "200+ (LinkedIn reports 201–500 associates)",
     "research_groups": 6
   },
-  
   "labs": [
     {
       "id": "mccarthy_lab",
       "name": "McCarthy Lab",
       "domain": "Artificial Intelligence",
+      "guiding_quote": {
+        "text": "Our ultimate objective is to make programs that learn from their experience as effectively as humans do. We shall say that a program has common sense if it automatically deduces for itself a sufficient wide class of immediate consequences of anything it is told and what it already knows.",
+        "author": "John McCarthy"
+      },
+      "description": "McCarthy Lab serves as the intellectual hub for artificial intelligence, focusing on the development of novel algorithms across supervised, unsupervised, and reinforcement learning. Research ranges from refining classical statistical models to architecting sophisticated deep learning networks, seeking a rigorous mathematical understanding of why specific computational methods succeed, grounded in both theory and practical experimentation.",
       "focus_areas": [
         "Machine learning",
         "Deep learning",
@@ -96,6 +115,31 @@
         "Foundation models",
         "Neural networks"
       ],
+      "roster": {
+        "syndicates": [
+          { "name": "Aaryan Regmi", "id": "AP23110011209" },
+          { "name": "Bhavana Praneeth", "id": "AP23110010402" }
+        ],
+        "members": [
+          { "name": "Naseer Hussain", "id": "AP24110011550" },
+          { "name": "Muthu Amudhan S", "id": "AP24110012105" }
+        ],
+        "associates": [
+          { "name": "Akshat Srivastava", "id": "AP25110080078" },
+          { "name": "Aadrit", "id": "AP25110010004" },
+          { "name": "Ayushi Mishra", "id": "AP25110010550" },
+          { "name": "Konapala Naga Rahul Dhruva", "id": "AP24110011381" },
+          { "name": "Manya", "id": "AP25110071229" },
+          { "name": "Ojasv Kushwah", "id": "AP25110070707" },
+          { "name": "Aadit Bansal", "id": "AP25110010048" },
+          { "name": "Damineni Hemanth Satya Veer", "id": "AP23110010419" },
+          { "name": "Sanhik Nandi", "id": "AP25110010070" },
+          { "name": "Gnanada Alavala", "id": "AP24110011000" },
+          { "name": "Adarsh Kumar Pandey", "id": "AP25110070008" },
+          { "name": "Ramratan Padhy", "id": "AP25110010434" },
+          { "name": "Atmakuri Yeshwanth", "id": "AP24110011233" }
+        ]
+      },
       "keywords": [
         "mccarthy",
         "ai",
@@ -110,6 +154,11 @@
       "id": "pausch_lab",
       "name": "Pausch Lab",
       "domain": "Immersive Media",
+      "guiding_quote": {
+        "text": "Experience is what you get when you didn't get what you wanted. And experience is often the most valuable thing you have to offer.",
+        "author": "Randy Pausch"
+      },
+      "description": "Pausch Lab is a hub of immersive media, specializing in AR, VR, extended reality, and 2D and 3D game development. The lab is dedicated to redefining digital interaction by creating highly engaging and spatially aware virtual environments, extending beyond traditional gaming to fully interactive simulations that craft compelling spatial experiences driven by real-time rendering engines.",
       "focus_areas": [
         "Augmented Reality",
         "Virtual Reality",
@@ -119,6 +168,28 @@
         "Real-time rendering",
         "Interactive simulations"
       ],
+      "roster": {
+        "syndicates": [
+          { "name": "Daksh Kulkarni", "id": "AP22110010696" },
+          { "name": "Anjana Modugu", "id": "AP22110010181" }
+        ],
+        "members": [
+          { "name": "Lakshya Singh", "id": "AP24110010416" },
+          { "name": "Ayush Kumar", "id": "AP24110010251" },
+          { "name": "Om Mittal", "id": "AP24110010404" }
+        ],
+        "associates": [
+          { "name": "Seshagiri Bharadwaj Sai", "id": "AP23110010367" },
+          { "name": "Aiswarya Patro", "id": "AP25110070046" },
+          { "name": "Jaideep", "id": "AP25110010006" },
+          { "name": "Aaditya Raj", "id": "AP25110010272" },
+          { "name": "Ansh Chaudhary", "id": "AP24110012075" },
+          { "name": "Satyam Kumar", "id": "AP25110010254" },
+          { "name": "Abhiram Vattikonda", "id": "AP23110010258" },
+          { "name": "Rishabh Surana", "id": "AP2510070915" },
+          { "name": "Ishaan Singh", "id": "AP25110030022" }
+        ]
+      },
       "keywords": [
         "pausch",
         "ar",
@@ -134,6 +205,12 @@
       "id": "tesla_lab",
       "name": "Tesla Lab",
       "domain": "Hardware and Embedded Systems",
+      "tagline": "WIRE IT, POWER IT",
+      "guiding_quote": {
+        "text": "Be alone, that is the secret of invention; be alone, that is when ideas are born.",
+        "author": "Nikola Tesla"
+      },
+      "description": "Tesla Lab is a center of hardware innovation, specializing in electronics, embedded systems, and microcontroller architectures. The lab is dedicated to bridging the physical and digital worlds by designing highly efficient and responsive circuitry, extending beyond standard hardware design to complex IoT integrations, engineering robust physical solutions driven by real-time operating systems and edge computing.",
       "focus_areas": [
         "Electronics",
         "Embedded systems",
@@ -142,6 +219,23 @@
         "Edge computing",
         "Real-time operating systems"
       ],
+      "roster": {
+        "syndicates": [
+          { "name": "Rajat Kumar Singh", "id": "AP23110010893" }
+        ],
+        "members": [
+          { "name": "Parnavo Pal", "id": "AP23110020045" },
+          { "name": "Burra Krishna Karthikeya", "id": "AP24110011237" }
+        ],
+        "associates": [
+          { "name": "Prince Kumar Yadav", "id": "AP25110030026" },
+          { "name": "Venkata Abhiram Jammula", "id": "AP25110070924" },
+          { "name": "Aayush Bansal", "id": "AP25110040014" },
+          { "name": "Shazia Mohommed", "id": "AP24110010725" },
+          { "name": "Kanak Suresh Alone", "id": "AP25110010150" },
+          { "name": "Paarth Singhal", "id": "AP25110020003" }
+        ]
+      },
       "keywords": [
         "tesla",
         "hardware",
@@ -156,6 +250,12 @@
       "id": "satoshi_lab",
       "name": "Satoshi Lab",
       "domain": "Blockchain and Cybersecurity",
+      "tagline": "HACK FIRST, TRUST NONE",
+      "guiding_quote": {
+        "text": "If you don't believe me or don't get it, I don't have time to try to convince you, sorry.",
+        "author": "Satoshi Nakamoto"
+      },
+      "description": "Satoshi Lab stands at the forefront of Web3 and digital security, focusing on decentralized architectures and modern defense mechanisms. Research encompasses cryptocurrency, malware analysis, and network security, with a specialized emphasis on penetration testing and reverse engineering. By integrating threat research with advanced cryptography and secure coding, the lab empowers members to engineer resilient, trustless systems.",
       "focus_areas": [
         "Blockchain protocols",
         "Cryptography",
@@ -165,6 +265,27 @@
         "Malware analysis",
         "Vulnerability assessment"
       ],
+      "roster": {
+        "syndicates": [
+          { "name": "Ayush Dutta", "id": "AP23110011131" }
+        ],
+        "members": [
+          { "name": "Rohan Kumar Mohanta", "id": "AP24110011046" },
+          { "name": "Shivangi Sharma", "id": "AP24110010425" },
+          { "name": "Rahul Rajith", "id": "AP24110010499" },
+          { "name": "Jayesh Krishna", "id": "AP24110010415" },
+          { "name": "Shruthi Bhagawan", "id": "AP23110011386" }
+        ],
+        "associates": [
+          { "name": "Satwik Gupta", "id": "AP24110010470" },
+          { "name": "Hardik Chaurasia", "id": "AP25110100014" },
+          { "name": "P. Bharath Varma", "id": "AP25110090019" },
+          { "name": "Kartikey Juyal", "id": "AP25110010073" },
+          { "name": "Lakshaya Sharma", "id": "AP25122230022" },
+          { "name": "Aakriti Gupta", "id": "AP25110070337" },
+          { "name": "S.MD. Arshadullah", "id": "AP25110010902" }
+        ]
+      },
       "projects": [
         {
           "id": "poseidon",
@@ -195,6 +316,12 @@
       "id": "norman_lab",
       "name": "Norman Lab",
       "domain": "Web, App and Cloud",
+      "tagline": "BUILD BOLD, MADE HUMAN",
+      "guiding_quote": {
+        "text": "A product is more than its features. It is an experience — an experience shaped by expectations, context, culture, and emotion. Designers must understand people before they try to design for them.",
+        "author": "Don Norman"
+      },
+      "description": "Norman Lab is a center of innovation, specializing in web development, app development, cloud computing, and UI/UX design. The lab is dedicated to pushing the boundaries of online experiences by creating seamless and user-friendly interfaces, extending beyond typical web apps into app development with creative, cutting-edge solutions.",
       "focus_areas": [
         "Web development",
         "App development",
@@ -203,6 +330,31 @@
         "User interfaces",
         "Digital experiences"
       ],
+      "roster": {
+        "syndicates": [
+          { "name": "Shatadru Mukhopadhyay", "id": "AP23110010732" },
+          { "name": "Asrith Tanniru", "id": "AP23110010708" }
+        ],
+        "members": [
+          { "name": "Vissamsetty Lakshmi Nikitha", "id": "AP23110011195" },
+          { "name": "Anurag Tummapudi", "id": "AP24110011106" }
+        ],
+        "associates": [
+          { "name": "Ghule Aniketh", "id": "AP24110011410" },
+          { "name": "Arun Kumar Yarlagadda", "id": "AP24110011172" },
+          { "name": "Yuvraj Singh", "id": "AP25110010259" },
+          { "name": "Cherukuri Shanyu Sai", "id": "AP25110080029" },
+          { "name": "Rohit Chintalapudi", "id": "AP24110010986" },
+          { "name": "Manoj Inturi", "id": "AP25110130028" },
+          { "name": "Aditya Chandra", "id": "AP22110011050" },
+          { "name": "Alok Raj", "id": "AP24110010335" },
+          { "name": "Ravuri Uma Manvitha", "id": "AP25110130099" },
+          { "name": "J Omkareswar", "id": "AP24110010212" },
+          { "name": "Talari Roshini", "id": "AP24110011183" },
+          { "name": "Saikanth Gubbala", "id": "AP22111260054" },
+          { "name": "G Sri Krishna Abhiram", "id": "AP23110010222" }
+        ]
+      },
       "keywords": [
         "norman",
         "web",
@@ -215,148 +367,7 @@
         "development"
       ]
     }
-  ]
-,
-  "university": {
-    "name": "SRM University-AP",
-    "full_name": "SRM University Andhra Pradesh",
-    "location": "Amaravati, Andhra Pradesh, India",
-    "type": "Private multidisciplinary university",
-    "established": 2017,
-    "leadership": {
-      "chancellor": "Dr. T. R. Paarivendhar",
-      "vice_chancellor": "Prof. Ch. Satish Kumar"
-    },
-    "campus_size": "100+ acres",
-    "description": "A research-oriented university combining engineering, science, liberal arts, business, and global exposure with strong emphasis on innovation and entrepreneurship.",
-    "highlights": [
-      "Industry-oriented curriculum",
-      "International collaborations (UC Berkeley, Carnegie Mellon, WI-Madison, etc.)",
-      "Research-driven culture and strong placements",
-      "Supports student-led labs like Next Tech Lab",
-      "Participation in cutting-edge initiatives (AI Institute, Quantum Computing Hub)"
-    ],
-    "academics": [
-      "Undergraduate programmes in Engineering, Liberal Arts, Sciences and Business",
-      "Postgraduate and Ph.D programmes with research focus",
-      "Emerging technologies tracks including Energy Engineering, Defence Engineering, and Semiconductor Technologies"
-    ],
-    "achievements": [
-      "QS I-GAUGE Institution of Happiness (2025–26)",
-      "Ranked amongst top private universities in Nature Index and IIRF rankings",
-      "Strong placement records with international offers and high package averages"
-    ]
-  },
-  "state": {
-    "name": "Andhra Pradesh",
-    "capital_region": "Amaravati",
-    "location": "Southeastern coast of India along the Bay of Bengal",
-    "nickname": "Rice Bowl of India",
-    "description": "A culturally rich and naturally beautiful state known for classical arts, spiritual heritage, warm hospitality, and bold cuisine. Andhra Pradesh blends centuries-old traditions with modern education and innovation, making it an ideal environment for research communities like Next Tech Lab and institutions like SRM University-AP.",
-    "language": {
-      "official": "Telugu",
-      "classical_language_status": true,
-      "notes": "One of India's designated classical languages with a deep literary and poetic history."
-    },
-    "cultural_identity": {
-      "traits": [
-        "Warm hospitality",
-        "Strong community bonds",
-        "Celebration of arts and festivals",
-        "Respect for education and knowledge",
-        "Balance of tradition and technology"
-      ]
-    },
-    "classical_arts": {
-      "dance_forms": [
-        "Kuchipudi"
-      ],
-      "music": [
-        "Carnatic classical music",
-        "Telugu folk music"
-      ],
-      "crafts_and_handlooms": [
-        "Kalamkari hand-painted textiles",
-        "Ikat weaving",
-        "Kondapalli toys",
-        "Traditional silk sarees"
-      ]
-    },
-    "festivals": [
-      "Ugadi (Telugu New Year)",
-      "Sankranti/Pongal (Harvest festival)",
-      "Vinayaka Chavithi",
-      "Sri Rama Navami",
-      "Dussehra and Deepavali"
-    ],
-    "cuisine": {
-      "style": "Spicy, tangy, and rice-based",
-      "famous_dishes": [
-        "Andhra Biryani",
-        "Gongura Pachadi",
-        "Avakaya Pickle",
-        "Gutti Vankaya Kura",
-        "Pesarattu",
-        "Pulihora",
-        "Bobbatlu"
-      ],
-      "notes": "Widely regarded as one of the spiciest and most flavorful cuisines in India."
-    },
-    "nature_and_geography": {
-      "coastline": "Long Bay of Bengal coastline with beaches and ports",
-      "major_rivers": [
-        "Krishna",
-        "Godavari"
-      ],
-      "landscapes": [
-        "Fertile deltas",
-        "Hill stations",
-        "Valleys",
-        "Forests"
-      ]
-    },
-    "important_places": [
-      "Tirupati",
-      "Araku Valley",
-      "Borra Caves",
-      "Amaravati Buddhist heritage sites",
-      "Visakhapatnam beaches"
-    ],
-    "tourism_landmarks": [
-      {
-        "name": "Sri Venkateswara Temple",
-        "location": "Tirupati",
-        "type": "Spiritual pilgrimage site"
-      },
-      {
-        "name": "Araku Valley",
-        "type": "Hill station and coffee plantations"
-      },
-      {
-        "name": "Borra Caves",
-        "type": "Natural limestone caves"
-      }
-    ],
-    "connection_to_university": {
-      "context": "SRM University-AP and Next Tech Lab operate in Amaravati, benefiting from the state's peaceful environment, strong educational ecosystem, and culturally vibrant student community.",
-      "benefits": [
-        "Supportive local culture",
-        "Growing tech ecosystem",
-        "Student innovation mindset",
-        "Blend of tradition and modern research"
-      ]
-    },
-    "keywords": [
-      "andhra",
-      "telugu culture",
-      "kuchipudi",
-      "spicy food",
-      "amaravati",
-      "tirupati",
-      "heritage",
-      "coastal india"
-    ]
-  },
+  ],
   "keywords_global": [
     "next tech lab",
     "ntl",

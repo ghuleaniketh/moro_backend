@@ -7,12 +7,12 @@ const ntlKnowledge = JSON.parse(fs.readFileSync(knowledgePath, 'utf-8'));
 
 // Format knowledge for LLM context
 const createKnowledgeContext = () => {
-    const org = ntlKnowledge.organization;
-    const structure = ntlKnowledge.structure;
-    const history = ntlKnowledge.history;
-    const membership = ntlKnowledge.membership;
-    const university = ntlKnowledge.university;
-    const state = ntlKnowledge.state;
+const org = ntlKnowledge.organization || {};
+const structure = ntlKnowledge.structure || {};
+const history = ntlKnowledge.history || {};
+const membership = ntlKnowledge.membership || {};
+const university = ntlKnowledge.university || {};
+const state = ntlKnowledge.state || {};
     
     // Format labs with all details
     const labs = (ntlKnowledge.labs || []).map(lab => {
@@ -23,46 +23,46 @@ const createKnowledgeContext = () => {
         return `${lab.name} (${lab.domain}):
 - Focus Areas: ${(lab.focus_areas || []).join(', ')}
 - Projects:
-${projects}
+${projects || '  * No project details available.'}
 - Keywords: ${(lab.keywords || []).join(', ')}`;
     }).join('\n\n');
 
-    const achievements = (ntlKnowledge.achievements_and_recognition || []).map(a => `- ${a}`).join('\n');
-    const timeline = (ntlKnowledge.history.timeline || []).map(t => `- ${t.year}: ${t.event}`).join('\n');
-    const universityHighlights = (university.highlights || []).map(h => `- ${h}`).join('\n');
+    const achievements = (ntlKnowledge.achievements_and_recognition || []).map(a => `- ${a}`).join('\n') || '- No achievements available.';
+    const timeline = (history.timeline || []).map(t => `- ${t.year}: ${t.event}`).join('\n') || '- No timeline available.';
+    const universityHighlights = (Array.isArray(university.highlights) ? university.highlights : []).map(h => `- ${h}`).join('\n') || '- No university highlights available.';
     
     // Format state information
-    const stateInfo = `
+    const stateInfo = state.name ? `
  Name: ${state.name}
-Capital: ${state.capital_region}
-Location: ${state.location}
-Nickname: ${state.nickname}
-Description: ${state.description}
+Capital: ${state.capital_region || 'N/A'}
+Location: ${state.location || 'N/A'}
+Nickname: ${state.nickname || 'N/A'}
+Description: ${state.description || 'N/A'}
 
-Language: ${state.language.official} (Classical Language)
+Language: ${state.language?.official || 'N/A'} (Classical Language)
 
-Cultural Identity: ${state.cultural_identity.traits.join(', ')}
+Cultural Identity: ${(state.cultural_identity?.traits || []).join(', ') || 'N/A'}
 
 Classical Arts:
-- Dance: ${state.classical_arts.dance_forms.join(', ')}
-- Music: ${state.classical_arts.music.join(', ')}
-- Crafts: ${state.classical_arts.crafts_and_handlooms.join(', ')}
+- Dance: ${(state.classical_arts?.dance_forms || []).join(', ') || 'N/A'}
+- Music: ${(state.classical_arts?.music || []).join(', ') || 'N/A'}
+- Crafts: ${(state.classical_arts?.crafts_and_handlooms || []).join(', ') || 'N/A'}
 
-Festivals: ${state.festivals.join(', ')}
+Festivals: ${(state.festivals || []).join(', ') || 'N/A'}
 
-Cuisine: ${state.cuisine.style}
-Famous Dishes: ${state.cuisine.famous_dishes.join(', ')}
-Note: ${state.cuisine.notes}
+Cuisine: ${state.cuisine?.style || 'N/A'}
+Famous Dishes: ${(state.cuisine?.famous_dishes || []).join(', ') || 'N/A'}
+Note: ${state.cuisine?.notes || 'N/A'}
 
 Geography:
-- Coastline: ${state.nature_and_geography.coastline}
-- Rivers: ${state.nature_and_geography.major_rivers.join(', ')}
-- Landscapes: ${state.nature_and_geography.landscapes.join(', ')}
+- Coastline: ${state.nature_and_geography?.coastline || 'N/A'}
+- Rivers: ${(state.nature_and_geography?.major_rivers || []).join(', ') || 'N/A'}
+- Landscapes: ${(state.nature_and_geography?.landscapes || []).join(', ') || 'N/A'}
 
-Important Places: ${state.important_places.join(', ')}
+Important Places: ${(state.important_places || []).join(', ') || 'N/A'}
 
-Connection to University: ${state.connection_to_university.context}
-Benefits: ${state.connection_to_university.benefits.join(', ')}`;
+Connection to University: ${state.connection_to_university?.context || 'N/A'}
+Benefits: ${(state.connection_to_university?.benefits || []).join(', ') || 'N/A'}` : 'No Andhra Pradesh state details available in the knowledge base.';
 
     return `You are Moro, an AI assistant built by students of Next Tech Lab AP.
 
